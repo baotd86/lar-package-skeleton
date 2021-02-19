@@ -1,0 +1,54 @@
+{
+    "name": "baotd86/lar-package-skeleton",
+    "description": "My Laravel package skeleton",
+    "keywords": [
+        "baotd86",
+        "lar-package-skeleton"
+    ],
+    "homepage": "https://github.com/baotd86/lar-package-skeleton",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bảo Trần",
+            "email": "baotd86@yahoo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Baotd86\\LarPackageSkeleton\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Baotd86\\LarPackageSkeleton\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Baotd86\\LarPackageSkeleton\\LarPackageSkeletonServiceProvider"
+            ],
+            "aliases": {
+                "LarPackageSkeleton": "Baotd86\\LarPackageSkeleton\\LarPackageSkeletonFacade"
+            }
+        }
+    }
+}
